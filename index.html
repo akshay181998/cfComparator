@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+ <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+<body>
+    <div class="field is-grouped container"  style="max-width: 1000px; margin-top: 100px;">
+        <p class="control is-expanded">
+          <input class="input" type="text"  name="user1" id="user1" placeholder="user-1 handle">
+        </p>
+        <!-- <p class="control is-expanded">
+            <input class="input" type="text" name="user2" id="user2" placeholder="user-2 handle">
+        </p> -->
+        <p class="control">
+          <a class="button" onclick="loadDetail()">
+            Add User Handle
+          </a>
+        </p>
+      </div>
+      <br><br>
+      <div class="container has-text-centered">
+        <!-- <button class="button" onCLick="showChart()">Show the graph</button>    -->
+        <div id="chartContainer" style="height:700px">
+      </div>
+    <!-- <button onclick="loadDetail()" class="button is-primary">click me</button> -->
+    </div>
+
+
+
+<!-- <canvas id="myChart" style="max-width:800px; max-height:600px;"></canvas> -->
+</body>
+
+</html>
+
+
