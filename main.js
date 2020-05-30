@@ -49,7 +49,7 @@ function loadDetail () {
 		  xhr.send();  
 		  c++;
 		}else{
-		  notify('Empty handles are Omitted');
+		  notif('Empty handles are Omitted',"is-warning");
 		}
 	}
 }
