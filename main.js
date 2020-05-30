@@ -68,8 +68,60 @@ window.onload = function () {
 		labelFontColor: "#fff"
 	},
     axisY:{
+	stripLines:[
+      {
+      startValue:0,
+      endValue: 1200,
+      color:"#b2bec3"
+      },
+      {
+        startValue:1200,
+        endValue: 1400,
+        color:"#26de81"
+      },
+      {                
+        startValue:1400,
+        endValue:1600,                
+        color:"#00cec9"                
+      },
+      {                
+        startValue:1600,
+        endValue:1900,                
+        color:"#6c5ce7  "                
+      },
+      {
+        startValue:1900,
+        endValue: 2100,
+        color:"#ffb8b8"
+      },
+      {
+      startValue:2100,
+      endValue: 2300,
+      color:"#fffa65"
+      },
+      {
+        startValue:2300,
+        endValue: 2400,
+        color:"#ffaf40"
+      },
+      {
+      startValue:2400,
+      endValue: 2600,
+      color:"#ff9f1a"
+      },
+      {
+        startValue:2600,
+        endValue: 3000,
+        color:"#e55039"
+      },
+      {
+      startValue:3000,
+      endValue: 5000,
+      color:"#eb2f06"
+      }
+      ],
 	  labelFontColor: "#fff",
-      includeZero: false
+      		includeZero: false
 	  // viewportMinimum: 400,            
     },
 	backgroundColor: "transparent",
