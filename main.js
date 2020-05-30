@@ -49,7 +49,7 @@ function loadDetail () {
 		  xhr.send();  
 		  c++;
 		}else{
-		  alert('please the details ');
+		  notify('Empty handles are Omitted');
 		}
 	}
 }
