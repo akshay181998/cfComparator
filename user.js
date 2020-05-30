@@ -26,7 +26,7 @@ function loadDetails() {
             }
 
             function printf(values , keys){
-                // console.log(values , keys);
+                console.log(values , keys);
                 val.push({x: keys , y: values});
             }
             mp.forEach(printf);
@@ -42,9 +42,10 @@ window.onload = function () {
     chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
     theme: "light1", 
+    dataPointMaxWidth: 75,
     axisX: {
         includeZero: false,
-        gridThickness: 0,
+        interval: 100,
     },
     axisY: {            
         gridThickness: 0,
@@ -57,7 +58,7 @@ window.onload = function () {
         legend: {
           fontFamily: "arial"
         },
-    data: []
+        data: []
 });
 chart.render();
 
@@ -68,7 +69,6 @@ function addNew() {
     chart.options.data.push({
         type: "column",
         indexLabelFontColor: "#5A5757",
-        indexLabelFontSize: 24,
         indexLabelPlacement: "outside",
         dataPoints: val
     });
