@@ -4,6 +4,14 @@ let tmp = {
 };
 
 var c = 0;
+var colorList = [
+  "#FFD700",
+  "#4B0082",
+  "#00FFFF",
+  "#B22222",
+  "#ffd3e1",
+  "#303960"
+]
 let dataArr = [];
 let field1;
 let chart;
@@ -53,7 +61,14 @@ window.onload = function () {
   chart = new CanvasJS.Chart("chartContainer",
   {
     animationEnabled: true,
+    axisX:{
+      labelFontSize: 16,
+      labelFontStyle: "arial"
+    },
     axisY:{
+      labelFontSize: 16,
+      labelFontStyle: "arial",
+      gridThickness: 0,
       stripLines:[
       {
       startValue:0,
@@ -63,54 +78,59 @@ window.onload = function () {
       {
         startValue:1200,
         endValue: 1400,
-        color:"#26de81"
+        color:"rgb(49,255,116)"
       },
       {                
         startValue:1400,
         endValue:1600,                
-        color:"#00cec9"                
+        color:"rgb(94,230,186)"                
       },
       {                
         startValue:1600,
         endValue:1900,                
-        color:"#6c5ce7  "                
+        color:"rgb(180,148,255)"                
       },
       {
         startValue:1900,
         endValue: 2100,
-        color:"#ffb8b8"
+        color:"rgb(255,75,255)"
       },
       {
       startValue:2100,
       endValue: 2300,
-      color:"#fffa65"
+      color:"rgb(255,208,130)"
       },
       {
         startValue:2300,
         endValue: 2400,
-        color:"#ffaf40"
+        color:"rgb(255,191,76)"
       },
       {
       startValue:2400,
       endValue: 2600,
-      color:"#ff9f1a"
+      color:"rgb(255,100,113)"
       },
       {
         startValue:2600,
         endValue: 3000,
-        color:"#e55039"
+        color:"rgb(255,0,36)"
       },
       {
       startValue:3000,
       endValue: 5000,
-      color:"#eb2f06"
+      color:"rgb(175,0,0)"
       }
       ],
       includeZero: false,
       // viewportMinimum: 400,            
     },
     title:{
-    text: "Codeforce graph comparator"
+    text: "Codeforce graph comparator",
+    fontFamily: "arial",
+    fontWeight: "bold"
+    },
+    legend: {
+      fontFamily: "arial"
     },
     data: []
 });
@@ -120,15 +140,17 @@ window.onload = function () {
 }
 
 function showChart () {
+  c--;
   console.log({        
+  });
+  chart.options.data.push({   
+    color: colorList[c],     
     type: "line",
+    showInLegend: true, 
+    legendText: field1,
     indexLabelFontSize: 12,
     dataPoints: dataArr
   });
-  chart.options.data.push({        
-    type: "line",
-    indexLabelFontSize: 12,
-    dataPoints: dataArr
-  });
+  c++;
   chart.render();
 }

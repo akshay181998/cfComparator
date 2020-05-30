@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="user.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+ <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167981579-1"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167981579-1');
+</script> -->
+
+<style>
+    
+</style>
+
+
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <h1 class="title">okCoder</h1>
+          </a>
+      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">
+              Home
+            </a>      
+            <a class="navbar-item" href="index.html">
+              Comparator
+            </a>
+            <a class="navbar-item" href="index.html">
+              Progress
+            </a>
+            <a class="navbar-item" >
+              About us
+            </a>
+        </div>
+    </nav>
+    <div class="field is-grouped container"  style="max-width: 1000px; margin-top: 40px;">
+        <p class="control is-expanded">
+          <input class="input" type="text"  name="user1" id="user1" placeholder="user-1 handle">
+        </p>
+        <p class="control">
+          <a class="button" onclick="loadDetails()">
+            Add User Handle
+          </a>
+        </p>
+      </div>
+      <br><br>
+    <div class="container">
+        <div id="chartContainer" style="height:700px">
+    </div>
+    <!-- <button class="button is-info" onClick="randomFunction()">Click Me!!</button> -->
+
+<script>
+(function() {
+    var burger = document.querySelector('.navbar-burger');
+    var menu = document.querySelector('.navbar-menu');
+    burger.addEventListener('click', function() {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+    });
+})();
+</script>
+</body>
+</html>
