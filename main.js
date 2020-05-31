@@ -16,8 +16,12 @@ let dataArr = [];
 let field1;
 let chart;
 
-function loadDetail () {
-  field1 = document.getElementById("user1").value;
+function loadDetail (handle) {
+  if(handle) {
+    field1 = handle
+  } else {
+    field1 = document.getElementById("user1").value;
+  }
   if(field1 != ''){
     console.log('clicked');
     const xhr = new XMLHttpRequest();
@@ -153,4 +157,11 @@ function showChart () {
   });
   c++;
   chart.render();
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const handles = urlParams.get('handles');
+if (handles != null) {
+  const list = handles.split(';');
+  list.forEach(handle =>loadDetail(handle));
 }
