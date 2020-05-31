@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!-- <script src="main.js"></script>     -->
+    <script src="problem.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>ProblemSet</title>
+
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <h1 class="title">okCoder</h1>
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Home
+                </a>
+                <a class="navbar-item" href="index.html">
+                    Comparator
+                </a>
+                <a class="navbar-item" href="user.html">
+                    Progress
+                </a>
+                <a class="navbar-item">
+                    About us
+                </a>
+            </div>
+    </nav>
+    <div class="field is-grouped container" style="max-width: 1000px; margin-top: 40px;">
+        <p class="control is-expanded">
+            <input class="input" type="text" name="user1" id="user" placeholder="user-1 handle">
+        </p>
+
+        <p class="control">
+            <a class="button" onclick="loadProblem()">
+                Enter User Handle
+            </a>
+        </p>
+    </div>
+    <br><br>
+    <div class="container">
+        <h3 class="subtitle is-3">Solved Problems</h3>
+        <br>
+        <div class="table-container is-centerd">
+
+            <table class="table is-bordered is-striped is-hoverable is-fullwidth" id="solvedTable">
+                <thead>
+                    <tr>
+                        <th><abbr title="Position">S No.</abbr></th>
+                        <th><abbr title="ContestId">ContestID</abbr></th>
+                        <th><abbr title="ProblemName">Name</abbr></th>
+
+                        <th><abbr title="Rating">Rating</abbr></th>
+                        <th><abbr title="Tag">Problem Tags</abbr></th>
+                        <th><abbr title="Verdict">Status</abbr></th>
+                    </tr>
+                </thead>
+
+                </tfoot>
+                <tbody>
+
+                </tbody>
+            </table><br>
+            <!-- Table for unsolved problem -->
+            <br>
+            <h3 class="subtitle is-3">Unsolved Problems</h3><br>
+            <div class="table-container is-centerd">
+
+                <table class="table is-bordered is-striped  is-hoverable is-fullwidth" id="unSolvedTable">
+                    <thead>
+                        <tr>
+                            <th><abbr title="Position">S No.</abbr></th>
+                            <th><abbr title="ContestId">ContestID</abbr></th>
+                            <th><abbr title="ProblemName">Name</abbr></th>
+
+                            <th><abbr title="Rating">Rating</abbr></th>
+                            <th><abbr title="Tag">Problem Tags</abbr></th>
+                            <th><abbr title="Verdict">Status</abbr></th>
+                        </tr>
+                    </thead>
+
+                    </tfoot>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <br><br><br>
+        <!-- table for solved problem  -->
+    </div>
+</body>
+
+</html>
